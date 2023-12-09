@@ -1,7 +1,7 @@
 #1. Найти максимальный среди всех элементов тех строк заданной матрицы, которые упорядочены (либо по возрастанию, либо по убыванию)
 
 
-def is_sorted_row(row): # Проверяем является ли строка отсортированной (либо по возрастанию, либо по убыванию)
+def is_sorted_row(row):
     sort_row = sorted(row)
     reverse_row = sort_row.copy()
     reverse_row.reverse()
@@ -9,18 +9,18 @@ def is_sorted_row(row): # Проверяем является ли строка 
 
 
 def find_max(matrix):
-    max_value = float("-inf") # Задаем минимальному элементу значение минус бесконечности
+    max_value = float("-inf")
 
     for row in matrix:
-        if is_sorted_row(row): # Проверяем является ли строка отсортированной (либо по возрастанию, либо по убыванию)
-            row_max = max(row) # Находим максимальный элемент строки
-            if row_max > max_value: # Если максимальный элемент строки больше найденного прежде элемента
+        if is_sorted_row(row): 
+            row_max = max(row)
+            if row_max > max_value:
                 max_value = row_max
 
     return max_value
 
 
-def print_matrix(matrix): # Процедура вывода матрицы в консоль
+def print_matrix(matrix):
     for row in matrix:
         print(row)
 
@@ -38,10 +38,10 @@ for i in range(n):
     matrix.append(row)
 
 
-print("Исходная матрица:") # Выводим исходную матрицу
+print("Исходная матрица:")
 print_matrix(matrix)
 
-max_value = find_max(matrix) # Вызов фукнции для поиска максимального значения
+max_value = find_max(matrix)
 
 if max_value != float("-inf"):
     print(f"Максимальный элемент в отсортированных строках: {max_value}")
