@@ -2,9 +2,9 @@
 
 def sort_matrix_row(matrix):
     for row in matrix:
-        row.sort() # Сортируем строку
+        row.sort() 
 
-def print_matrix(matrix): # Процедура вывода матрицы в консоль
+def print_matrix(matrix): 
     for row in matrix:
         print(row)
 
@@ -21,10 +21,10 @@ for i in range(n):
     matrix.append(row)
 
 
-print("Исходная матрица:") # Выводим исходную матрицу
+print("Исходная матрица:")
 print_matrix(matrix)
 
-sort_matrix_row(matrix) # Вызываем процедуру сортировку строк
+sort_matrix_row(matrix)
 
-print("Упорядоченная матрица:") # Выводим отсортированную матрицу
+print("Упорядоченная матрица:") 
 print_matrix(matrix)
